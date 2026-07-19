@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valore Consultoria Financeira</title>
+<meta name="description" content="Consultoria financeira especializada em diagnóstico, educação financeira e prevenção de falência empresarial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="valore-icon-square.png">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('valore-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <img src="valore-logo-white.png" alt="Valore Consultoria Financeira" class="logo-img">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85 5.6 18.4M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="contato.html" class="nav-cta">Fale conosco</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-photo">
+  <div class="hero-grid-lines"></div>
+  <div class="container">
+    <div class="hero-content-narrow">
+      <div class="hero-eyebrow">Consultoria Financeira Especializada</div>
+      <h1>Sua empresa tem solução.<br>Nós <em>ajudamos você</em><br>a encontrá-la.</h1>
+      <p>Diagnóstico financeiro estruturado para empresas em risco — nossa metodologia própria em 4 etapas transforma crise em recuperação sustentável.</p>
+      <div class="hero-actions">
+        <a href="contato.html" class="btn btn-primary">Solicitar diagnóstico gratuito →</a>
+        <a href="serviços.html" class="btn btn-outline">Como funciona</a>
+      </div>
+
+      <div class="risk-card">
+        <span class="risk-card-label">Em qual nível está sua empresa?</span>
+        <div class="risk-options">
+          <a href="contato.html?nivel=alerta" class="risk-pill risk-alerta">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 3l8 14H2L10 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="10" y1="9" x2="10" y2="12.5" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="15" r="0.9" fill="currentColor"/></svg>
+            Alerta
+          </a>
+          <a href="contato.html?nivel=critico" class="risk-pill risk-critico">
+            <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="6.5" x2="10" y2="10.5" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13.2" r="0.9" fill="currentColor"/></svg>
+            Crítico
+          </a>
+          <a href="contato.html?nivel=emergencia" class="risk-pill risk-emergencia">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M11 2 4 12h5l-1 6 8-11h-5l1-5z" fill="currentColor"/></svg>
+            Emergência
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESAFIOS -->
+<section id="desafios">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">O cenário</div>
+      <h2>Os riscos financeiros que mais derrubam empresas</h2>
+      <p>A maioria das falências não nasce de um único erro, mas do acúmulo de decisões financeiras tomadas sem informação, processo ou acompanhamento.</p>
+    </div>
+    <div class="challenge-grid">
+      <div class="challenge-card">
+        <span class="num">01</span>
+        <h3>Fluxo de caixa sem visibilidade</h3>
+        <p>Decisões tomadas sem previsibilidade de entradas e saídas, gerando surpresas que comprometem a operação.</p>
+      </div>
+      <div class="challenge-card">
+        <span class="num">02</span>
+        <h3>Endividamento mal estruturado</h3>
+        <p>Dívidas contraídas sem planejamento, com custo financeiro que corrói a margem do negócio ao longo do tempo.</p>
+      </div>
+      <div class="challenge-card">
+        <span class="num">03</span>
+        <h3>Baixa educação financeira na gestão</h3>
+        <p>Líderes e equipes tomando decisões críticas sem domínio dos indicadores que realmente sustentam o negócio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS (teaser) -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">O que fazemos</div>
+      <h2>Serviços</h2>
+      <p>Cada serviço é desenhado para atacar uma causa específica de instabilidade financeira, não apenas seus sintomas.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="num">SERV. 01</span>
+        <h3>Diagnóstico Financeiro Empresarial</h3>
+        <p>Levantamento completo da saúde financeira da empresa: indicadores, riscos, margens e pontos de vulnerabilidade.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">SERV. 02</span>
+        <h3>Reestruturação de Dívidas e Prevenção de Falência</h3>
+        <p>Renegociação estratégica de passivos e construção de um plano de recuperação para empresas em situação crítica.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">SERV. 03</span>
+        <h3>Educação Financeira Corporativa</h3>
+        <p>Capacitação da liderança e das equipes para interpretar indicadores e tomar decisões financeiras mais seguras.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">SERV. 04</span>
+        <h3>Consultoria para Expansão e Investimentos</h3>
+        <p>Avaliação financeira de novos projetos, aportes e expansões, com foco em risco e retorno sustentável.</p>
+      </div>
+    </div>
+    <div class="section-foot-link">
+      <a href="serviços.html" class="text-link">Ver todos os serviços →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="method">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Nosso diferencial</div>
+      <h2>Método Valore</h2>
+      <p>Uma metodologia própria e estruturada em quatro etapas sequenciais, criada para transformar diagnóstico em resultado sustentável — não apenas em relatório.</p>
+    </div>
+    <div class="method-line">
+      <div class="method-step">
+        <span class="step-label">ETAPA 01</span>
+        <h3>Diagnóstico</h3>
+        <p>Raio-x financeiro completo: fluxo de caixa, endividamento, margens e riscos operacionais.</p>
+      </div>
+      <div class="method-step">
+        <span class="step-label">ETAPA 02</span>
+        <h3>Estrutura</h3>
+        <p>Reorganização de processos financeiros, governança e definição de indicadores de acompanhamento.</p>
+      </div>
+      <div class="method-step">
+        <span class="step-label">ETAPA 03</span>
+        <h3>Educação</h3>
+        <p>Capacitação da liderança e das equipes para sustentar as mudanças na rotina da empresa.</p>
+      </div>
+      <div class="method-step">
+        <span class="step-label">ETAPA 04</span>
+        <h3>Monitoramento</h3>
+        <p>Acompanhamento contínuo dos indicadores, com ajustes de rota conforme a realidade do negócio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Resultados</div>
+      <h2>O que dizem nossos clientes</h2>
+      <p>Depoimentos ilustrativos — substitua pelos relatos reais dos seus clientes antes de publicar o site.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <span class="quote-mark">“</span>
+        <p class="quote">O diagnóstico mostrou riscos no nosso fluxo de caixa que a gente simplesmente não enxergava. Em seis meses, reorganizamos a operação inteira.</p>
+        <div class="testimonial-author">
+          <strong>[Nome do Cliente]</strong>
+          <span>[Cargo], [Empresa]</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">“</span>
+        <p class="quote">O Método Valore trouxe disciplina para decisões que antes eram tomadas no improviso. Hoje a gestão financeira é parte da rotina, não um apagão de incêndio.</p>
+        <div class="testimonial-author">
+          <strong>[Nome do Cliente]</strong>
+          <span>[Cargo], [Empresa]</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">“</span>
+        <p class="quote">Estávamos negociando dívidas sem estratégia nenhuma. A consultoria estruturou um plano realista e evitou que a empresa fechasse as portas.</p>
+        <div class="testimonial-author">
+          <strong>[Nome do Cliente]</strong>
+          <span>[Cargo], [Empresa]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Pronto para entender os números da sua empresa?</h2>
+    <p>Agende uma conversa inicial, sem compromisso, e descubra por onde começar.</p>
+    <a href="contato.html" class="btn btn-primary">Falar com um consultor</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img src="valore-logo-white.png" alt="Valore Consultoria Financeira" class="footer-logo-img">
+        <p class="footer-tagline">Recuperando empresas. Construindo futuros.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 10-14.5 4.6L4 20l3.5-1.4A8 8 0 0020 12z" stroke="currentColor" stroke-width="1.6"/><path d="M9 10.5c0 3 2.5 5.5 5.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><line x1="8" y1="10.5" x2="8" y2="16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="7.6" r="0.9" fill="currentColor"/><path d="M11.5 16v-3.2c0-1.3 1-2.2 2.2-2.2s2 .9 2 2.2V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="serviços.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <p class="footer-attend-label">Atendimento nacional</p>
+        <p class="footer-attend-label">De segunda a sexta, 9h às 18h</p>
+        <p class="footer-attend-email"><a href="mailto:contato@valoreconsultoria.com.br">contato@valoreconsultoria.com.br</a></p>
+        <a href="contato.html" class="footer-cta-btn">Solicitar Diagnóstico</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-wide-line"></div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Valore Consultoria Financeira. Todos os direitos reservados.</span>
+      <a href="#" class="footer-legal-link">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-consent" class="cookie-consent">
+  <div class="cookie-consent-icon">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <h5>Sua privacidade é importante para nós</h5>
+  <p>Usamos cookies para melhorar sua experiência no site e entender como ele é utilizado. Para saber mais, veja nossa <a href="#">Política de Privacidade</a>.</p>
+  <div class="cookie-consent-actions">
+    <button id="cookie-more" type="button" class="cookie-more-btn">Mais opções</button>
+    <button id="cookie-accept" type="button" class="cookie-accept-btn">Aceitar</button>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

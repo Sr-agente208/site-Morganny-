@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato — Valore Consultoria Financeira</title>
+<meta name="description" content="Fale com a Valore Consultoria Financeira. Atendimento em todo o Brasil, com sede em São Paulo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="valore-icon-square.png">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('valore-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <img src="valore-logo-white.png" alt="Valore Consultoria Financeira" class="logo-img">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85 5.6 18.4M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="contato.html" class="nav-cta">Fale conosco</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero diagnostic-hero">
+  <div class="hero-grid-lines"></div>
+  <div class="container diagnostic-grid">
+    <div class="diagnostic-copy">
+      <div class="eyebrow">Diagnóstico gratuito</div>
+      <h1>Fale com um especialista hoje</h1>
+      <p class="diagnostic-lead">Nosso diagnóstico gratuito inclui:</p>
+      <ul class="diagnostic-list">
+        <li><span class="num">1</span>Análise completa do fluxo de caixa e passivos</li>
+        <li><span class="num">2</span>Identificação dos principais riscos e gargalos financeiros</li>
+        <li><span class="num">3</span>Orientação inicial sobre o melhor caminho de recuperação</li>
+      </ul>
+    </div>
+
+    <form class="diagnostic-form" onsubmit="event.preventDefault(); this.querySelector('.submit-btn-lg').textContent='Recebemos sua solicitação ✓'; this.querySelector('.submit-btn-lg').disabled=true;">
+      <div class="form-row">
+        <div class="field">
+          <label for="d-nome">Nome *</label>
+          <input id="d-nome" type="text" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="d-empresa">Empresa *</label>
+          <input id="d-empresa" type="text" placeholder="Nome da empresa" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="d-telefone">Telefone *</label>
+          <input id="d-telefone" type="tel" placeholder="(11) 90000-0000" required>
+        </div>
+        <div class="field">
+          <label for="d-email">E-mail *</label>
+          <input id="d-email" type="email" placeholder="seu@email.com" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="d-faturamento">Faturamento anual</label>
+        <select id="d-faturamento">
+          <option value="">Selecione uma faixa</option>
+          <option>Até R$ 360 mil</option>
+          <option>R$ 360 mil a R$ 4,8 milhões</option>
+          <option>R$ 4,8 milhões a R$ 20 milhões</option>
+          <option>Acima de R$ 20 milhões</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="d-mensagem">Mensagem</label>
+        <textarea id="d-mensagem" placeholder="Descreva brevemente a situação da sua empresa..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn-lg">Quero meu diagnóstico gratuito</button>
+      <p class="form-note-dark">Suas informações são usadas apenas para retorno do nosso time de consultoria.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Pré-preenche a mensagem quando chega pelo card "Em qual nível está sua empresa?" na home
+  (function(){
+    const params = new URLSearchParams(window.location.search);
+    const nivel = params.get('nivel');
+    if(!nivel) return;
+    const textos = {
+      alerta: 'Percebi alguns sinais de alerta financeiro na minha empresa e gostaria de entender melhor a situação.',
+      critico: 'Minha empresa está em um momento financeiro crítico e preciso de orientação o quanto antes.',
+      emergencia: 'Estamos em uma situação de emergência financeira e precisamos de ajuda urgente.'
+    };
+    const mensagem = document.getElementById('d-mensagem');
+    if(mensagem && textos[nivel]) mensagem.value = textos[nivel];
+  })();
+</script>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Outros canais</div>
+      <h2>Prefere falar diretamente?</h2>
+      <p>Use um dos canais abaixo, ou envie sua mensagem pelo formulário acima.</p>
+    </div>
+
+    <div class="contact-channels-grid">
+      <div class="contact-detail">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8M3 8a1 1 0 011-1h16a1 1 0 011 1" stroke="currentColor" stroke-width="1.6"/></svg>
+        <div><strong>E-mail</strong><span>contato@valoreconsultoria.com.br</span></div>
+      </div>
+      <div class="contact-detail">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 5c0-1.1.9-2 2-2h2.2c.5 0 1 .3 1.1.8l1 3.2c.2.5 0 1-.4 1.3L7.5 9.5a13 13 0 007 7l1.2-1.4c.3-.4.9-.5 1.3-.4l3.2 1c.5.2.8.6.8 1.1V19c0 1.1-.9 2-2 2h-1C9.9 21 3 14.1 3 5.9V5z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <div><strong>Telefone / WhatsApp</strong><span>(11) 0000-0000</span></div>
+      </div>
+      <div class="contact-detail">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+        <div><strong>Sede</strong><span>Av. Paulista, 0000 — São Paulo, SP<br>Atendimento em todo o Brasil</span></div>
+      </div>
+      <div class="contact-detail">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+        <div><strong>Horário de atendimento</strong><span>Segunda a sexta, 9h às 18h</span></div>
+      </div>
+    </div>
+
+    <div class="map-frame">Mapa — Av. Paulista, São Paulo, SP</div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Dúvidas comuns</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div style="max-width:760px;">
+      <div class="faq-item">
+        <h3>A primeira conversa tem algum custo?</h3>
+        <p>Não. A conversa inicial serve para entendermos o momento da sua empresa e avaliarmos se e como podemos ajudar, sem qualquer compromisso.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Vocês atendem empresas fora de São Paulo?</h3>
+        <p>Sim. Embora nossa sede seja em São Paulo, atendemos empresas em todo o Brasil, presencialmente ou remotamente conforme a necessidade do cliente.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quanto tempo leva o diagnóstico financeiro?</h3>
+        <p>Depende do porte e da complexidade da empresa, mas a maioria dos diagnósticos é concluída entre duas e quatro semanas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Vocês atendem empresas que já estão em situação crítica?</h3>
+        <p>Sim. Temos um serviço específico de reestruturação de dívidas e prevenção de falência para empresas em momentos financeiros mais delicados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img src="valore-logo-white.png" alt="Valore Consultoria Financeira" class="footer-logo-img">
+        <p class="footer-tagline">Recuperando empresas. Construindo futuros.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 10-14.5 4.6L4 20l3.5-1.4A8 8 0 0020 12z" stroke="currentColor" stroke-width="1.6"/><path d="M9 10.5c0 3 2.5 5.5 5.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><line x1="8" y1="10.5" x2="8" y2="16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="7.6" r="0.9" fill="currentColor"/><path d="M11.5 16v-3.2c0-1.3 1-2.2 2.2-2.2s2 .9 2 2.2V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="serviços.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <p class="footer-attend-label">Atendimento nacional</p>
+        <p class="footer-attend-label">De segunda a sexta, 9h às 18h</p>
+        <p class="footer-attend-email"><a href="mailto:contato@valoreconsultoria.com.br">contato@valoreconsultoria.com.br</a></p>
+        <a href="contato.html" class="footer-cta-btn">Solicitar Diagnóstico</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-wide-line"></div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Valore Consultoria Financeira. Todos os direitos reservados.</span>
+      <a href="#" class="footer-legal-link">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-consent" class="cookie-consent">
+  <div class="cookie-consent-icon">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <h5>Sua privacidade é importante para nós</h5>
+  <p>Usamos cookies para melhorar sua experiência no site e entender como ele é utilizado. Para saber mais, veja nossa <a href="#">Política de Privacidade</a>.</p>
+  <div class="cookie-consent-actions">
+    <button id="cookie-more" type="button" class="cookie-more-btn">Mais opções</button>
+    <button id="cookie-accept" type="button" class="cookie-accept-btn">Aceitar</button>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>
